@@ -1,0 +1,43 @@
+/* 
+ * This file is for your main content css.
+ * If you want to import other css files, please @import them here.
+ *
+ * For more information, please see: https://developer.chrome.com/extensions/content_scripts
+ */
+
+.simg-pop-btn {
+    position: absolute;
+    z-index: 2147483647;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.simg-pop-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.simg-pop-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+}
+
+.simg-pop-btn-small {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+}
+
+.simg-pop-btn-small svg {
+    width: 16px;
+    height: 16px;
+}

@@ -1,0 +1,1 @@
+window.addEventListener("message",e=>{if(e.source!==window.parent)return;const{type:t,expression:n}=e.data;if("EVAL_JSON_EXPRESSION"===t)try{const e=new Function("return "+n)();window.parent.postMessage({type:"EVAL_SUCCESS",data:e},"*")}catch(e){window.parent.postMessage({type:"EVAL_ERROR",error:e.message},"*")}});
