@@ -1,0 +1,36 @@
+.ftk-r-d-wrapper {
+    font-size: 14px;
+}
+
+.ftk-r-d-wrapper button {
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ftk-r-d-wrapper button:hover {
+    background-color: #0056b3;
+}
+
+.ftk-r-d-p-wrapper {
+    font-size: 14px;
+}
+
+.ftk-r-d-p-wrapper button {
+    width: 100%;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ftk-r-d-p-wrapper button:hover {
+    background-color: #0056b3;
+}
