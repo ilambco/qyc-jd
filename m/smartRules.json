@@ -1,0 +1,842 @@
+[
+    {
+        "reg": "www.mi.com/shop/buy/detail",
+        "name": "小米",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": ".J_imgList img"
+            },
+            {
+                "name": "详情",
+                "selector": ".detail-item img",
+                "lazySrc": "src"
+            }
+        ]
+    },
+    {
+        "reg": "detail.(m.)?(?:tmall|liangxinyao).(?:com|hk)|item.taobao.com",
+        "name": "淘宝/天猫",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "[class*=picGallery] img[class*=thumbnailPic]"
+            },
+            {
+                "name": "视频",
+                "selector": "video",
+                "clickTrigger2": "[class*=switchTabsItem]",
+                "timeAfterTrigger": 50
+            },
+            {
+                "name": "SKU",
+                "selector": "[class*=skuItem] img",
+                "scrollIntoView": "[class*=skuWrapper] [class*=quantityTip]",
+                "alt": {
+                    "closest": "[class*=\"valueItem--\"]",
+                    "selector": "span",
+                    "fromTextContent": true
+                }
+            },
+            {
+                "name": "详情",
+                "selector": ".desc-root .descV8-singleImage-image, .desc-root img.lazyload",
+                "lazySrc": "src",
+                "scrollIntoView": ".desc-root"
+            }
+        ],
+        "simg": {
+            "popbtn": {
+                "imgCovered": [
+                    {
+                        "cover": "[class*=--thumbnail--]",
+                        "img": {
+                            "closest": "[class*=--thumbnail--]"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "reg": "s.taobao.com",
+        "name": "Taobao Search",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Taobao Search",
+                "selector": "[class*=\"mainPic\"] img[class*=\"mainPic\"]",
+                "alts": [
+                    {
+                        "closest": "[data-spm-act-id]",
+                        "selector": "[class*=\"shopNameText\"]",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": "[data-spm-act-id]",
+                        "selector": "[class*=\"title\"]",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": " search-content-col",
+                        "selector": "[data-spm-act-id]",
+                        "fromAttr": "data-spm-act-id"
+                    }
+                ],
+                "scrollIntoView": ".pagination-container",
+                "pageno": {
+                    "selector": ".next-current"
+                }
+            }
+        ]
+    },
+    {
+        "reg": "detail.1688.com",
+        "name": "1688",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "#dt-tab img, .detail-gallery-turn-outter-wrapper .detail-gallery-img, .detail-gallery-turn .detail-gallery-img, .img-list-wrapper .od-gallery-img:not(.prepic-video img)"
+            },
+            {
+                "name": "主图",
+                "selector": "#gallery .v-image-cover",
+                "bgi": true
+            },
+            {
+                "name": "视频",
+                "selector": "video"
+            },
+            {
+                "name": "SKU",
+                "selector": ".pc-sku-wrapper .prop-img",
+                "bgi": true,
+                "index": 2,
+                "alt": {
+                    "closest": ".prop-item-inner-wrapper",
+                    "selector": ".prop-name",
+                    "fromTextContent": true
+                }
+            },
+            {
+                "name": "SKU",
+                "selector": "#skuPreview .feature-item-img",
+                "index": 2
+            },
+            {
+                "name": "SKU",
+                "selector": ".sku-filter-button img",
+                "index": 2,
+                "alt": {
+                    "closest": ".sku-filter-button",
+                    "selector": ".label-name",
+                    "fromTextContent": true
+                }
+            },
+            {
+                "name": "SKU",
+                "selector": ".sku-item-image",
+                "index": 2,
+                "bgi": true,
+                "alt": {
+                    "closest": ".sku-item-wrapper",
+                    "selector": ".sku-item-name",
+                    "fromTextContent": true
+                }
+            },
+            {
+                "name": "SKU",
+                "selector": "#skuSelection .ant-image-img",
+                "index": 2,
+                "alt": {
+                    "closest": ".expand-view-item",
+                    "selector": ".item-label",
+                    "fromTextContent": true
+                }
+            },
+            {
+                "name": "详情",
+                "selector": ".content-detail img",
+                "lazySrc": "lazyloadSrc",
+                "scrollIntoView": ".content-detail"
+            }
+        ],
+        "simg": {
+            "popbtn": {
+                "imgCovered": [
+                    {
+                        "cover": ".od-gallery-turn-item-wrapper",
+                        "img": {
+                            "closest": ".od-gallery-turn-item-wrapper"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "reg": "s.1688.com",
+        "name": "1688 search",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "1688",
+                "selector": ".page-offerlist .main-img",
+                "alts": [
+                    {
+                        "closest": ".search-offer-wrapper",
+                        "selector": ".offer-shop-row .desc-text",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": ".search-offer-wrapper",
+                        "selector": ".offer-title-row .title-text",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": ".search-offer-wrapper",
+                        "selector": ".J_WangWang",
+                        "fromAttr": "data-extra"
+                    }
+                ],
+                "scrollIntoView": ".pagination-container"
+            }
+        ]
+    },
+    {
+        "reg": "www.alibaba.com/product-detail",
+        "name": "阿里巴巴",
+        "testUrl": "",
+        "docTitle": "h1",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": "[data-module=\"MainImage\"] [class*=\"id-bg\"][style]",
+                "bgi": true
+            },
+            {
+                "name": "Video",
+                "selector": "video"
+            },
+            {
+                "name": "SKU",
+                "selector": "[data-testid=\"sku-list-item\"] img",
+                "alt": {
+                    "closest": "div",
+                    "selector": "img",
+                    "fromTextContent": false,
+                    "fromAttr": "alt"
+                }
+            },
+            {
+                "name": "Detail",
+                "selector": "#J-rich-text-description img",
+                "lazySrc": "src",
+                "scrollIntoView": "#J-rich-text-description",
+                "iframe": "#description-layout iframe"
+            }
+        ]
+    },
+    {
+        "reg": "www.alibaba.com/trade/search",
+        "name": "Alibaba Search",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Alibaba Search",
+                "selector": ".app-organic-search__main-body .searchx-product-e-slider__img",
+                "alts": [
+                    {
+                        "closest": ".searchx-offer-item",
+                        "selector": ".searchx-product-e-company",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": ".searchx-offer-item",
+                        "selector": "[data-spm=\"d_title\"]",
+                        "fromTextContent": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "reg": "aliexpress\\..+/item/\\d+.html|aliexpress\\..+/ssr/\\d+/BundleDeals2",
+        "name": "Aliexpress",
+        "docTitle": "h1[data-pl=\"product-title\"]",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": "[class*=\"slider--img\"] img"
+            },
+            {
+                "name": "Video",
+                "selector": "video"
+            },
+            {
+                "name": "SKU",
+                "selector": "[class*=\"sku-item\"] img",
+                "alt": {
+                    "closest": "div",
+                    "selector": "img",
+                    "fromTextContent": false,
+                    "fromAttr": "alt"
+                }
+            },
+            {
+                "name": "Detail",
+                "selector": "#product-description img",
+                "scrollIntoView": "#nav-description"
+            },
+            {
+                "name": "Detail",
+                "shadowRoot": "#product-description div",
+                "selector": "#product-description img",
+                "scrollIntoView": "#nav-description"
+            }
+        ]
+    },
+    {
+        "reg": "aliexpress\\..+/w/",
+        "name": "Aliexpress Search",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Aliexpress",
+                "selector": "#card-list .mz_lo img"
+            }
+        ]
+    },
+    {
+        "reg": "item.(jkcs|yiyao)?jd.(com|hk)",
+        "name": "京东",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "#spec-list img"
+            },
+            {
+                "name": "视频",
+                "selector": "video",
+                "clickTrigger": ".J-video-icon"
+            },
+            {
+                "name": "SKU",
+                "selector": "#choose-attrs img",
+                "alt": {
+                    "closest": "a",
+                    "selector": "img",
+                    "fromAttr": "alt"
+                }
+            },
+            {
+                "name": "详情",
+                "selector": "#J-detail-content img",
+                "lazySrc": "lazyload",
+                "scrollIntoView": "#J-detail-content"
+            },
+            {
+                "name": "详情",
+                "selector": "#J-detail-content .ssd-module",
+                "bgi": true
+            }
+        ]
+    },
+    {
+        "reg": "search.jd.com",
+        "name": "jd search",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "JD",
+                "selector": "[class*=\"_searchContent\"] img[data-loading]",
+                "alts": [
+                    {
+                        "closest": "[data-sku]",
+                        "selector": "[class*=\"_shopFloor\"] [class*=\"_name\"]",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": "[data-sku]",
+                        "selector": "[class*=\"_goods_title\"]",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": "[data-sku]",
+                        "fromAttr": "data-sku"
+                    }
+                ],
+                "scrollIntoView": ".pagination-container"
+            }
+        ]
+    },
+    {
+        "reg": "shein.com.*/.*p-\\d+.html",
+        "name": "shein",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": ".product-intro__thumbs-item img,.main-picture li .crop-image-container img"
+            },
+            {
+                "name": "SKU",
+                "selector": ".product-intro__color_choose img, .goods-color__radio img, .main-sales-attr__color img.crop-image-container__img"
+            },
+            {
+                "name": "Video",
+                "selector": "video"
+            }
+        ]
+    },
+    {
+        "reg": "pawfecthouse.com/.*products",
+        "name": "pawfecthouse",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": ".product_gallery_nav img"
+            },
+            {
+                "name": "Video",
+                "selector": "video",
+                "clickTrigger": ".J-video-icon"
+            },
+            {
+                "name": "SKU",
+                "selector": ".customily-swatch img"
+            },
+            {
+                "name": "Detail",
+                "selector": "#J-detail-content img",
+                "lazySrc": "lazyload"
+            }
+        ]
+    },
+    {
+        "reg": "www.mytheresa.com",
+        "name": "mytheresa",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": ".product__gallery__thumbscarousel__image"
+            }
+        ]
+    },
+    {
+        "reg": "www.wildberries.ru/.*/detail",
+        "name": "wildberries",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": ".product-page__main-slider img, [class*=mediaSlider] img"
+            },
+            {
+                "name": "Video",
+                "selector": "video[src*=\".mp4\"]"
+            },
+            {
+                "name": "SKU",
+                "selector": ".slider-color img, .product-colors-container img"
+            },
+            {
+                "name": "Detail",
+                "selector": "#J-detail-content img",
+                "lazySrc": "lazyload"
+            }
+        ]
+    },
+    {
+        "reg": "detail.vip.com/detail-",
+        "name": "vip",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "#J-sImg-wrap img"
+            },
+            {
+                "name": "视频",
+                "selector": "video"
+            },
+            {
+                "name": "SKU",
+                "selector": "#J_detail_color img"
+            },
+            {
+                "name": "详情",
+                "selector": "#J_dc_image img",
+                "lazySrc": "original"
+            }
+        ]
+    },
+    {
+        "reg": "www.redbubble.com/i/",
+        "name": "redbubble",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": "[class*=ProductPreviewsCarousel_box] img"
+            }
+        ]
+    },
+    {
+        "reg": "www.gigab2b.com.*product_id=",
+        "name": "gigab2b",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": ".el-carousel__container img"
+            },
+            {
+                "name": "SKU",
+                "selector": ".options-wrap img"
+            }
+        ]
+    },
+    {
+        "reg": "www.goofish.com/item",
+        "name": "咸鱼",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "[class*=item-main-window-list-item] img"
+            }
+        ]
+    },
+    {
+        "reg": "www.vidaxl.hr.*\\d+.html",
+        "name": "vidaxl",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": "img.carousel-nav-item__img"
+            },
+            {
+                "name": "SKU",
+                "selector": "[class*=color-attribute] img",
+                "alt": {
+                    "closest": "[class*=color-attribute__values]",
+                    "selector": ".color-attribute__values--value-text",
+                    "fromTextContent": true
+                }
+            }
+        ]
+    },
+    {
+        "reg": "www.flannels.com",
+        "name": "flannels",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": "img.imgProduct"
+            },
+            {
+                "name": "Video",
+                "selector": "video",
+                "scrollIntoView": "video"
+            }
+        ]
+    },
+    {
+        "reg": "www.moncler.cn",
+        "name": "Moncler",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "img.main-image-animate"
+            }
+        ]
+    },
+    {
+        "reg": "www.temu.com/.*-m-\\d+.html",
+        "name": "temu store",
+        "groups": [
+            {
+                "name": "Image",
+                "selector": "img"
+            },
+            {
+                "name": "Video",
+                "selector": "video"
+            }
+        ]
+    },
+    {
+        "reg": "www.temu.com.*\\d+.html",
+        "name": "temu",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "._2AOclWz7 img",
+                "lazySrc": "src"
+            },
+            {
+                "name": "SKU",
+                "selector": "._2bzGqXzH img",
+                "alt": {
+                    "closest": "div",
+                    "selector": "img",
+                    "fromTextContent": false,
+                    "fromAttr": "alt"
+                }
+            },
+            {
+                "name": "视频",
+                "selector": "video"
+            },
+            {
+                "name": "详情",
+                "selector": "._2jCYETGt img",
+                "scrollIntoView": ".FSPfUoK9",
+                "lazySrc": "src"
+            }
+        ]
+    },
+    {
+        "reg": "www.temu.com.*search_result.html",
+        "name": "Temu Search",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Temu",
+                "selector": ".js-search-goodsList img.goods-img-external, .js-search-goodsList video",
+                "alts": [
+                    {
+                        "closest": "[data-tooltip*=\"goodContainer-\"]",
+                        "selector": "._1_Gt2q_G",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": "[data-tooltip*=\"goodContainer-\"]",
+                        "selector": "._2D9RBAXL",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": "[data-tooltip*=\"goodContainer-\"]",
+                        "selector": "[data-tooltip*=\"goodName-\"]",
+                        "fromAttr": "data-tooltip"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "reg": "www.walmart.com.*/\\d+",
+        "name": "walmart",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": "[data-testid=vertical-carousel-container] img"
+            }
+        ]
+    },
+    {
+        "reg": "amazon\\..+/(dp|gp/product)/",
+        "name": "Amazon",
+        "testUrl": "",
+        "groups": [],
+        "mainImgs": "#altImages .item img"
+    },
+    {
+        "reg": "vvic.com/item/",
+        "name": "搜款网",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": "#thumblist img"
+            },
+            {
+                "name": "详情",
+                "selector": ".detail-desc img",
+                "lazySrc": "src"
+            }
+        ]
+    },
+    {
+        "reg": "etsy.com.*/listing/\\d+",
+        "name": "ETSY",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "selector": "[data-carousel-pagination-list] img"
+            },
+            {
+                "name": "Video",
+                "selector": "video"
+            }
+        ]
+    },
+    {
+        "reg": "etsy.com.*/search",
+        "name": "ETSY Search",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Etsy",
+                "selector": "[data-search-results] .listing-link img, [data-search-results] .listing-link video",
+                "alts": [
+                    {
+                        "closest": ".listing-link",
+                        "selector": ".clickable-shop-name",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": ".listing-link",
+                        "selector": ".v2-listing-card__title",
+                        "fromTextContent": true
+                    },
+                    {
+                        "closest": ".listing-link",
+                        "fromAttr": "data-listing-id"
+                    }
+                ],
+                "pageno": {
+                    "selector": "[data-appears-component-name=\"search_pagination\"] .wt-is-selected"
+                }
+            }
+        ]
+    },
+    {
+        "reg": "yangkeduo.com/goods\\d*.html",
+        "name": "拼多多",
+        "testUrl": "",
+        "docTitle": ".tLYIg_Ju",
+        "groups": [
+            {
+                "name": "主图",
+                "index": 0,
+                "selector": ".PPuOGFfM img",
+                "lazySrc": "src"
+            },
+            {
+                "name": "SKU",
+                "index": 2,
+                "selector": ".IuvVTIp4 img"
+            },
+            {
+                "name": "详情",
+                "index": 3,
+                "selector": ".jwq0kbfa img, .Blmqu2TV img",
+                "lazySrc": "src"
+            }
+        ]
+    },
+    {
+        "reg": "made-in-china.com/product",
+        "name": "Made in China",
+        "groups": [],
+        "mainImgs": ".J-picImg-zoom-in"
+    },
+    {
+        "reg": "xag-au.com/.*products/",
+        "name": "XAG",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "主图",
+                "selector": ".media-gallery__thumbs img"
+            }
+        ]
+    },
+    {
+        "reg": "www\\.lazada\\..*/products",
+        "name": "Lazada",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "视频",
+                "index": 1,
+                "selector": "video",
+                "clickTrigger2": ".gallery-preview-panel__video-player"
+            }
+        ],
+        "mainImgs": ".item-gallery-v2__thumbnail-image"
+    },
+    {
+        "reg": "www.instagram.com",
+        "name": "instagram",
+        "testUrl": "",
+        "simg": {
+            "popbtn": {
+                "imgCovered": [
+                    {
+                        "cover": "._aagw",
+                        "img": {
+                            "closest": "._aagu"
+                        }
+                    },
+                    {
+                        "cover": "ul.x6s0dn4",
+                        "img": {
+                            "closest": "a"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "reg": "www.facebook.com",
+        "name": "facebook",
+        "testUrl": "",
+        "simg": {
+            "popbtn": {
+                "imgCropped": [
+                    {
+                        "wrapper": ".xqtp20y"
+                    }
+                ],
+                "imgCovered": [
+                    {
+                        "cover": "img+span.x1ey2m1c",
+                        "img": {
+                            "closest": "a"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "reg": ".tistory.com",
+        "name": "tistory",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "index": 0,
+                "selector": ".imageblock img"
+            }
+        ]
+    },
+    {
+        "reg": "www.vinted.*/items/",
+        "name": "vinted",
+        "testUrl": "",
+        "groups": [
+            {
+                "name": "Main",
+                "index": 0,
+                "selector": ".item-thumbnail img"
+            }
+        ]
+    }
+]

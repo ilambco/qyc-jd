@@ -1,0 +1,337 @@
+[
+    {
+        "id": 1,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "content-security-policy",
+                    "operation": "remove"
+                },
+                {
+                    "header": "X-Frame-Options",
+                    "operation": "remove"
+                }
+            ]
+        },
+        "condition": {
+            "resourceTypes": ["main_frame", "sub_frame"]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "Access-Control-Allow-Origin",
+                    "operation": "set",
+                    "value": "*"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "i.pximg.net|img30.360buyimg.com",
+            "resourceTypes": ["image"]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "Access-Control-Allow-Origin",
+                    "operation": "set",
+                    "value": "*"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "inongjia.net",
+            "resourceTypes": ["image"]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "Access-Control-Allow-Origin",
+                    "operation": "set",
+                    "value": "*"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "instagram.com",
+            "resourceTypes": ["image"]
+        }
+    },
+    {
+        "id": 41,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "remove"
+                },
+                {
+                    "header": "sec-fetch-dest",
+                    "operation": "set",
+                    "value": "document"
+                },
+                {
+                    "header": "sec-fetch-user",
+                    "operation": "set",
+                    "value": "?1"
+                },
+                {
+                    "header": "sec-fetch-mode",
+                    "operation": "set",
+                    "value": "navigate"
+                },
+                {
+                    "header": "Accept",
+                    "operation": "set",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "instagram.com",
+            "resourceTypes": ["xmlhttprequest"]
+        }
+    },
+    {
+        "id": 42,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "Content-Security-Policy",
+                    "operation": "remove"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "instagram.com",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "content-security-policy",
+                    "operation": "remove"
+                },
+                {
+                    "header": "X-Frame-Options",
+                    "operation": "remove"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "pinterest.com|alibaba.com",
+            "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest"]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://weibo.com/"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "sinaimg.cn",
+            "resourceTypes": ["main_frame", "image"]
+        }
+    },
+    {
+        "id": 7,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "sec-fetch-site",
+                    "operation": "set",
+                    "value": "none"
+                },
+                {
+                    "header": "sec-fetch-dest",
+                    "operation": "set",
+                    "value": "document"
+                },
+                {
+                    "header": "sec-fetch-user",
+                    "operation": "set",
+                    "value": "?1"
+                },
+                {
+                    "header": "sec-fetch-mode",
+                    "operation": "set",
+                    "value": "navigate"
+                },
+                {
+                    "header": "accept",
+                    "operation": "set",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+                },
+                {
+                    "header": "cache-control",
+                    "operation": "set",
+                    "value": "max-age=0"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "www.facebook.com.*/((posts|videos|watch|reel|groups)/|permalink.php)",
+            "resourceTypes": ["xmlhttprequest"]
+        }
+    },
+    {
+        "id": 8,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "cross-origin-resource-policy",
+                    "operation": "set",
+                    "value": "cross-origin"
+                }
+            ]
+        },
+        "condition": {
+            "resourceTypes": ["image"],
+            "urlFilter": "fbcdn.net"
+        }
+    },
+    {
+        "id": 9,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "cross-origin-resource-policy",
+                    "operation": "set",
+                    "value": "cross-origin"
+                }
+            ]
+        },
+        "condition": {
+            "resourceTypes": ["image"],
+            "urlFilter": "cdninstagram.com"
+        }
+    },
+    {
+        "id": 10,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "Access-Control-Allow-Origin",
+                    "operation": "set",
+                    "value": "*"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "sp0.baidu.com",
+            "resourceTypes": ["xmlhttprequest"]
+        }
+    },
+    {
+        "id": 11,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://x.yupoo.com/photos"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "photo.yupoo.com",
+            "resourceTypes": ["main_frame", "image", "xmlhttprequest", "other"]
+        }
+    },
+    {
+        "id": 12,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "Access-Control-Allow-Origin",
+                    "operation": "set",
+                    "value": "*"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "https://file.made-in-china.com/img-search/upload",
+            "resourceTypes": ["xmlhttprequest"]
+        }
+    },
+    {
+        "id": 13,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "set",
+                    "value": "https://wallhaven.cc/"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "w.wallhaven.cc",
+            "resourceTypes": ["xmlhttprequest", "image"]
+        }
+    },
+    {
+        "id": 14,
+        "priority": 2,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "referer",
+                    "operation": "remove"
+                }
+            ]
+        },
+        "condition": {
+            "regexFilter": "alicdn.com|1688.com",
+            "resourceTypes": ["image"]
+        }
+    }
+]

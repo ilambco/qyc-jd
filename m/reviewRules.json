@@ -1,0 +1,49 @@
+[
+    {
+        "reg": "temu.com.*\\d+.html",
+        "panelSelector": "._2OaJDN8Y",
+        "reviewItemSelector": "._244ldJXl",
+        "dBtnParentSelector": "._3OHJMKy5",
+        "imgSelector": "li img._17EhhWj_",
+        "videoSelector": "video",
+        "videoTrigger": "._1IGd1eV8",
+        "videoSelectorAfterTrigger": ".UlB2cnwR video",
+        "closeVideo": "._209nN8GI",
+        "sku": "._2QI6iM-X",
+        "skuRelace": {
+            "reg": "^.*?[:：]",
+            "rep": ""
+        }
+    },
+    {
+        "reg": "detail.1688.com/offer/\\d+.html",
+        "panelSelector": ".ant-drawer-wrapper-body",
+        "reviewItemSelector": ".evaluation-content",
+        "imgSelector": ".evaluate-images .ant-image-img",
+        "videoSelector": "video",
+        "videoTrigger": "._1IGd1eV8",
+        "videoSelectorAfterTrigger": ".UlB2cnwR video",
+        "closeVideo": "._209nN8GI",
+        "sku": ".spec-info",
+        "skuRelace": {
+            "reg": "^.*?[:：]",
+            "rep": ""
+        }
+    },
+    {
+        "reg": "item.taobao.com|detail.tmall.com",
+        "panelSelector": ".content--nuxTngci",
+        "reviewItemSelector": ".Comment--H5QmJwe9",
+        "imgSelector": ".photo--ZUITAPZq img",
+        "videoSelector": "video",
+        "videoTrigger": ".playerIcon--wiAgap5w",
+        "videoSelectorAfterTrigger": ".content--NDIEPUoX video",
+        "closeVideo": ".closeIcon--HrDG2v1x",
+        "sku": ".meta--PLijz6qf",
+        "skuRelace": {
+            "reg": "^.+·",
+            "rep": ""
+        },
+        "dBtnParentSelector": ".contentWrapper--cSa5gEtn"
+    }
+]
