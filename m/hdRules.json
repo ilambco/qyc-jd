@@ -1,0 +1,1449 @@
+[
+    {
+        "enabled": true,
+        "site": "topit.me",
+        "srcPattern": "https?://.{2,}.topit.me/.*",
+        "replaceRules": [
+            {
+                "pattern": "[/][mst][/]",
+                "modifiers": "g",
+                "replacement": "/l/"
+            },
+            {
+                "pattern": "[mst][.]jpg",
+                "modifiers": "g",
+                "replacement": "l.jpg"
+            },
+            {
+                "pattern": "[/][mst]",
+                "modifiers": "g",
+                "replacement": "/l"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "新浪微博",
+        "srcPattern": "https?://.*[.]sinaimg[.]cn/.*",
+        "replaceRules": [
+            {
+                "pattern": "[/]small[/]",
+                "modifiers": "",
+                "replacement": "/large/"
+            },
+            {
+                "pattern": "[/]square[/]",
+                "modifiers": "",
+                "replacement": "/large/"
+            },
+            {
+                "pattern": "[/]thumbnail[/]",
+                "modifiers": "",
+                "replacement": "/large/"
+            },
+            {
+                "pattern": "[/]bmiddle[/]",
+                "modifiers": "",
+                "replacement": "/large/"
+            },
+            {
+                "pattern": "[/]thumb[\\d]*[/]",
+                "modifiers": "",
+                "replacement": "/large/"
+            },
+            {
+                "pattern": "[/]mw[\\d]+[/]",
+                "modifiers": "",
+                "replacement": "/large/"
+            },
+            {
+                "pattern": "\\/orj\\d+\\/",
+                "modifiers": "",
+                "replacement": "/large/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "QQ相册/空间",
+        "srcPattern": "https?://.*[.]photo[.]store[.]qq[.]com/.*",
+        "replaceRules": [
+            {
+                "pattern": "[/]m[/]",
+                "modifiers": "",
+                "replacement": "/o/"
+            },
+            {
+                "pattern": "&w=[\\d]+&h=[\\d]+",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "QQ相册/空间 - new",
+        "srcPattern": "qpic.cn/psb",
+        "replaceRules": [
+            {
+                "pattern": "/m/",
+                "modifiers": "",
+                "replacement": "/b/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "考拉海购",
+        "srcPattern": "pop.nosdn.127.net|haitao.nosdn\\d+.127.net|haitao.nos.netease.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?imageView.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "QQ相册2",
+        "srcPattern": "https?://group[.]store[.]qq[.]com/.*",
+        "replaceRules": [
+            {
+                "pattern": "[/]400$",
+                "modifiers": "",
+                "replacement": "/800"
+            },
+            {
+                "pattern": "[/]200$",
+                "modifiers": "",
+                "replacement": "/800"
+            },
+            {
+                "pattern": "[/]100$",
+                "modifiers": "",
+                "replacement": "/800"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "Twitter",
+        "srcPattern": "https://pbs.twimg.com/media/.*\\?format=",
+        "replaceRules": [
+            {
+                "pattern": "format=(.+?)\\b.*",
+                "modifiers": "",
+                "replacement": "format=$1&name=4096x4096"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "百度图趣",
+        "srcPattern": "https?://hiphotos[.]baidu[.]com/.*",
+        "replaceRules": [
+            {
+                "pattern": "[/]abpic[/]",
+                "modifiers": "",
+                "replacement": "/pic/"
+            },
+            {
+                "pattern": "[/]pin[/]w=[\\d]+[/].+[/]",
+                "modifiers": "",
+                "replacement": "/pin/pic/item/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "豆瓣相册",
+        "srcPattern": "https?://img[\\d]*[.]douban(io)?[.]com/.*",
+        "replaceRules": [
+            {
+                "pattern": "[/]thumb[/]",
+                "modifiers": "",
+                "replacement": "/photo/"
+            },
+            {
+                "pattern": "[/]albumicon[/]",
+                "modifiers": "",
+                "replacement": "/photo/"
+            },
+            {
+                "pattern": "photo/m/",
+                "modifiers": "",
+                "replacement": "photo/l/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "花瓣",
+        "srcPattern": "https?://img[.]hb[.]aicdn[.]com/.*|hbimg.huabanimg.com",
+        "replaceRules": [
+            {
+                "pattern": "_fw[\\d]+[w]*$|_\\/fw\\/\\d+.*|_fw[\\d]+.*$",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "Flickr",
+        "srcPattern": ".*[.]staticflickr[.]com.*",
+        "replaceRules": [
+            {
+                "pattern": "_[ms]\\.jpg$",
+                "modifiers": "",
+                "replacement": "_b.jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "Google+",
+        "srcPattern": "http.*lh.*\\.googleusercontent\\.com.*",
+        "replaceRules": [
+            {
+                "pattern": "[/]w\\d+-h\\d+(-n)*-k[/]",
+                "modifiers": "",
+                "replacement": "/s1600/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "迅雷方舟",
+        "srcPattern": "http.*\\.xlpan\\.kanimg\\.com.*",
+        "replaceRules": [
+            {
+                "pattern": "&s=.*[\\d]+.*$",
+                "modifiers": "",
+                "replacement": "&s=1600"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "poco.cn",
+        "srcPattern": "http.*image[\\d]*-c.poco.cn.*",
+        "replaceRules": [
+            {
+                "pattern": "_\\d{3}.jpg$",
+                "modifiers": "",
+                "replacement": ".jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "pconline太平洋摄影",
+        "srcPattern": "http.*.pconline.com.cn.*",
+        "replaceRules": [
+            {
+                "pattern": "_mthumb.jpg$",
+                "modifiers": "",
+                "replacement": ".jpg"
+            },
+            {
+                "pattern": "_thumb.jpg$",
+                "modifiers": "",
+                "replacement": ".jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "美丽说",
+        "srcPattern": "(http.*[.]meilishuo[.]net.*)|(http.*[.]meiliworks[.]com.*)",
+        "replaceRules": [
+            {
+                "pattern": "[/]l[/]",
+                "modifiers": "",
+                "replacement": "/_o/"
+            },
+            {
+                "pattern": "[/]r[/]",
+                "modifiers": "",
+                "replacement": "/_o/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "蘑菇街",
+        "srcPattern": "https?://.*[.]mogujie[.]cn/.*",
+        "replaceRules": [
+            {
+                "pattern": "_[\\d]{3}x[\\d]+.jpg$",
+                "modifiers": "",
+                "replacement": "_468x468.jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "又拍网",
+        "srcPattern": "https?://photo.yupoo.com/.*.jpg",
+        "replaceRules": [
+            {
+                "pattern": "(square.jpg$)|(fw200.jpg$)",
+                "modifiers": "",
+                "replacement": "medish.jpg"
+            },
+            {
+                "pattern": "small.jpg",
+                "modifiers": "",
+                "replacement": "big.jpg"
+            },
+            {
+                "pattern": "small.png",
+                "modifiers": "",
+                "replacement": "big.png"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "hao123美图",
+        "srcPattern": "http.*img.*[.]hao123[.]com.*",
+        "replaceRules": [
+            {
+                "pattern": "_310$",
+                "modifiers": "",
+                "replacement": "_0"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "pinterest",
+        "srcPattern": "https?://.*[.]pinimg[.]com/.*.jpg",
+        "replaceRules": [
+            {
+                "pattern": "[/]2([\\d]+)x[/]",
+                "modifiers": "",
+                "replacement": "/7$1x/"
+            },
+            {
+                "pattern": "474",
+                "modifiers": "",
+                "replacement": "736"
+            },
+            {
+                "pattern": "i.pinimg.com\\/\\d+x\\/",
+                "modifiers": "",
+                "replacement": "i.pinimg.com/originals/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "1688",
+        "srcPattern": "https?://cbu01.alicdn.com/img/ibank/.*\\..*x.*\\.jpg",
+        "replaceRules": [
+            {
+                "pattern": "_\\.webp$",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "\\.\\d+x\\d+\\.",
+                "modifiers": "",
+                "replacement": "."
+            },
+            {
+                "pattern": ".220x220xz.",
+                "modifiers": "",
+                "replacement": "."
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "aliexpress",
+        "srcPattern": "aliexpress-media.com",
+        "replaceRules": [
+            {
+                "pattern": "_\\d+x\\d+.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "淘宝天猫",
+        "srcPattern": "alicdn.com",
+        "replaceRules": [
+            {
+                "pattern": "_\\.webp",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "\\.png\\_\\d+x\\d+\\.png$",
+                "modifiers": "",
+                "replacement": ".png"
+            },
+            {
+                "pattern": "_\\d+x\\d+\\.jpg$",
+                "modifiers": "",
+                "replacement": "_800x800.jpg"
+            },
+            {
+                "pattern": "_\\d+x\\d+[qQ]\\d+\\.jpg.*",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "_640x0q80_\\.webp",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "_640x0q80$",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "_\\d+x\\d+.*",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "\\.\\d+x\\d+\\.",
+                "modifiers": "",
+                "replacement": "."
+            },
+            {
+                "pattern": "\\.jpg.*",
+                "modifiers": "",
+                "replacement": ".jpg"
+            },
+            {
+                "pattern": "\\.png.*",
+                "modifiers": "",
+                "replacement": ".png"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "京东",
+        "srcPattern": "360buyimg.com/",
+        "replaceRules": [
+            {
+                "pattern": "\\/n\\d+\\/",
+                "modifiers": "",
+                "replacement": "/imgzone/"
+            },
+            {
+                "pattern": "s\\d+x\\d+_(.*?)\\/",
+                "modifiers": "",
+                "replacement": "$1/"
+            },
+            {
+                "pattern": "!cc_50x64.jpg$",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": ".avif",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": ".jpg.*",
+                "modifiers": "",
+                "replacement": ".jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "唯品会",
+        "srcPattern": "a.vpimg\\d+.com/upload|h\\d.appsimg.com.*/upload",
+        "replaceRules": [
+            {
+                "pattern": "(_\\d+)*x\\d+(_\\d+)*.jpg",
+                "modifiers": "",
+                "replacement": ".jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "Amazon",
+        "srcPattern": "images-na.ssl-images-amazon.com/images|m.media-amazon.com/images",
+        "replaceRules": [
+            {
+                "pattern": "\\.[^./]+\\.jpg",
+                "modifiers": "",
+                "replacement": ".jpg"
+            },
+            {
+                "pattern": "_AC_UL1500_.",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "小红书",
+        "srcPattern": "ci.xiaohongshu.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?imageView2\\/2\\/w\\/100\\/h\\/100\\/q\\/90",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "airbnb",
+        "srcPattern": "muscache..+/im/pictures",
+        "replaceRules": [
+            {
+                "pattern": "\\?aki_policy=.*|\\?tdsourcetag=s_pcqq_aiomsg",
+                "modifiers": "",
+                "replacement": "?aki_policy=xx_large"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "美工云",
+        "srcPattern": "src.meigongyun.com/forum.*\\.jpg-png_gif",
+        "replaceRules": [
+            {
+                "pattern": "\\.jpg-png_gif",
+                "modifiers": "",
+                "replacement": ".jpg-homeSlide"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "shein.com",
+        "srcPattern": "//img.ltwebstatic.com/.*_thumbnail.*",
+        "replaceRules": [
+            {
+                "pattern": "_thumbnail.*?\\.",
+                "modifiers": "",
+                "replacement": "."
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "易派客 epec.com",
+        "srcPattern": "//img.epec.com/.*\\.(jpg|png)",
+        "replaceRules": [
+            {
+                "pattern": "\\.(jpg|png).\\d+w_\\d+h_.*",
+                "modifiers": "",
+                "replacement": ".$1"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "pailixiang.com",
+        "srcPattern": "http://img.pailixiang.com.*@!(pbig|psmall)",
+        "replaceRules": [
+            {
+                "pattern": ".!(pbig|psmall)",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "aikucun",
+        "srcPattern": "akmer.aikucun.com/",
+        "replaceRules": [
+            {
+                "pattern": "\\?x-oss-process.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "lookbooks.com",
+        "srcPattern": "amazonaws.com.*/lg_|lookbookspro.com.*/lg_",
+        "replaceRules": [
+            {
+                "pattern": "\\/lg_",
+                "modifiers": "",
+                "replacement": "/gxl_"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.aplusprod.com",
+        "srcPattern": "images.squarespace-cdn.com/content/.*?format=\\d+w",
+        "replaceRules": [
+            {
+                "pattern": "\\?format=\\d+w",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "unsplash.com",
+        "srcPattern": "images.unsplash.com/photo-",
+        "replaceRules": [
+            {
+                "pattern": "&auto=format&.*|&w=\\d+.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "m.inmuu.com",
+        "srcPattern": "s.tupianzhibo.cn/image/jpeg.*!listpc",
+        "replaceRules": [
+            {
+                "pattern": "!listpc",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.reiss.com",
+        "srcPattern": "www.reiss.com/media/product",
+        "replaceRules": [
+            {
+                "pattern": "\\?format=.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "微相册",
+        "srcPattern": "xcimg.szwego.com/.*.jpg\\?imageMogr2.*",
+        "replaceRules": [
+            {
+                "pattern": "\\?imageMogr2.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "人人网",
+        "srcPattern": "fmn.xnpic.com|fmn.rrfmn.com",
+        "replaceRules": [
+            {
+                "pattern": "\\p\\/(.*?)_p",
+                "modifiers": "",
+                "replacement": "p"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "知乎",
+        "srcPattern": "pic\\d.zhimg.com",
+        "replaceRules": [
+            {
+                "pattern": "\\.com\\\\d+\\/",
+                "modifiers": "",
+                "replacement": ".com/"
+            },
+            {
+                "pattern": "_hd.",
+                "modifiers": "",
+                "replacement": "_r."
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "堆糖",
+        "srcPattern": "c-ssl.dtstatic.com",
+        "replaceRules": [
+            {
+                "pattern": "\\.thumb\\.\\d+_\\d+_.\\.jpg.*",
+                "modifiers": "",
+                "replacement": ".jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "堆糖",
+        "srcPattern": "duitang.com/uploads/item/.*\\.thumb\\.",
+        "replaceRules": [
+            {
+                "pattern": "\\.thumb.*\\.",
+                "modifiers": "",
+                "replacement": "."
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "POCO",
+        "srcPattern": "pocoimg.cn/image/poco",
+        "replaceRules": [
+            {
+                "pattern": "_W\\d+.jpg",
+                "modifiers": "",
+                "replacement": ".jpg"
+            },
+            {
+                "pattern": "\\?imageMogr2.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "DHgate",
+        "srcPattern": "dhresource.com",
+        "replaceRules": [
+            {
+                "pattern": "\\/\\d+x\\d+(s?)\\/",
+                "modifiers": "",
+                "replacement": "/0x0$1/"
+            },
+            {
+                "pattern": "webp\\/m\\/",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "yzcdn",
+        "srcPattern": "img.yzcdn.cn/upload_files",
+        "replaceRules": [
+            {
+                "pattern": "!large.webp",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "途家民宿",
+        "srcPattern": "pic.tujia.com/upload/.*/thumb/",
+        "replaceRules": [
+            {
+                "pattern": "_300_200",
+                "modifiers": "",
+                "replacement": "_1500_1003"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "kidsfootlocker",
+        "srcPattern": "images.footlocker.com",
+        "replaceRules": [
+            {
+                "pattern": "&fmt=png-alpha",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "wid=\\d+",
+                "modifiers": "",
+                "replacement": "wid=640"
+            },
+            {
+                "pattern": "hei=\\d+",
+                "modifiers": "",
+                "replacement": "hei=640"
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "美叶 www.meiye.art",
+        "srcPattern": "images.psketch.com",
+        "replaceRules": [
+            {
+                "pattern": "_min_.*",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "?imageView2/2/w/500",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "caselio.com",
+        "srcPattern": "medias-caselio.e-systemes",
+        "replaceRules": [
+            {
+                "pattern": "_\\d+\\.jpg$",
+                "modifiers": "",
+                "replacement": ".jpg"
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "gallery.vphotos.cn",
+        "srcPattern": "img.vphotos.cn",
+        "replaceRules": [
+            {
+                "pattern": "logothumb",
+                "modifiers": "",
+                "replacement": "logosmall"
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "bp.pep.com.cn",
+        "srcPattern": "bp.pep.com.cn/ebook/",
+        "replaceRules": [
+            {
+                "pattern": "/thumb/",
+                "modifiers": "",
+                "replacement": "/mobile/"
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "www.archdaily.com",
+        "srcPattern": "images.adsttc.com",
+        "replaceRules": [
+            {
+                "pattern": "/thumb_jpg/",
+                "modifiers": "",
+                "replacement": "/slideshow/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "洋码头 ymatou.com",
+        "srcPattern": "pic\\d+.ymatou.com/",
+        "replaceRules": [
+            {
+                "pattern": "_i.jpg",
+                "modifiers": "",
+                "replacement": "_o.jpg"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "站酷",
+        "srcPattern": "img.zcool.cn/community",
+        "replaceRules": [
+            {
+                "pattern": "@.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "FURLA",
+        "srcPattern": "furla-cdn.thron.cn/delivery/public/image",
+        "replaceRules": [
+            {
+                "pattern": "\\/std\\/\\d+x\\d+",
+                "modifiers": "",
+                "replacement": "/std/1000x1000"
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "图虫网",
+        "srcPattern": "photo.tuchong.com|pstatp.com/weili",
+        "replaceRules": [
+            {
+                "pattern": "\\/ft\\d+\\/",
+                "modifiers": "",
+                "replacement": "/f/"
+            },
+            {
+                "pattern": "/sm/",
+                "modifiers": "",
+                "replacement": "/l/"
+            }
+        ]
+    },
+    {
+        "enabled": false,
+        "site": "Pexels",
+        "srcPattern": "images.pexels.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "Youtuge",
+        "srcPattern": "i.ytimg.com/",
+        "replaceRules": [
+            {
+                "pattern": "hqdefault",
+                "modifiers": "",
+                "replacement": "maxresdefault"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "澳新直邮正品 MOFA",
+        "srcPattern": "mfd-storage.cdn.aladdin.nz",
+        "replaceRules": [
+            {
+                "pattern": "\\?x-oss-process=.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "Ekonika",
+        "srcPattern": "ekonika.ru/resize/.*/upload",
+        "replaceRules": [
+            {
+                "pattern": "resize\\/.*\\/upload",
+                "modifiers": "",
+                "replacement": "upload"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "photoplus | plusx",
+        "srcPattern": "s.plusx.cn",
+        "replaceRules": [
+            {
+                "pattern": "imageView.*?&",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "Apple | 苹果",
+        "srcPattern": "store.storeimages.cdn-apple.com",
+        "replaceRules": [
+            {
+                "pattern": "wid=(76|38)",
+                "modifiers": "",
+                "replacement": "wid=2000"
+            },
+            {
+                "pattern": "hei=(76|38)",
+                "modifiers": "",
+                "replacement": "hei=2000"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "mario muzi",
+        "srcPattern": "www.mariomuzi.com",
+        "replaceRules": [
+            {
+                "pattern": "_resize_\\d+_\\d+",
+                "modifiers": "",
+                "replacement": "_resize_free_1000_"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "zalando",
+        "srcPattern": "ztat.net",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "walmart",
+        "srcPattern": "walmartimages.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "GAME UI",
+        "srcPattern": "image.gameuiux.cn",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "大作网",
+        "srcPattern": "//csimg\\d+.bigurl.ink/jin/",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "zillow",
+        "srcPattern": "photos.zillowstatic.com",
+        "replaceRules": [
+            {
+                "pattern": "-cc_ft_\\d+|-p_e|-p_h",
+                "modifiers": "",
+                "replacement": "-uncropped_scaled_within_1344_1008"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "中关村",
+        "srcPattern": "zol-img.com.cn",
+        "replaceRules": [
+            {
+                "pattern": "_\\d+x\\d+",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "rumah123",
+        "srcPattern": "picture.rumah123.com",
+        "replaceRules": [
+            {
+                "pattern": "\\d+x\\d+-fit",
+                "modifiers": "",
+                "replacement": "2560x2560-fit"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "携程网",
+        "srcPattern": "ctrip.com/images/",
+        "replaceRules": [
+            {
+                "pattern": "_W_.*?\\.",
+                "modifiers": "",
+                "replacement": "."
+            },
+            {
+                "pattern": "_R_.*\\.",
+                "modifiers": "",
+                "replacement": "."
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "携程网评论",
+        "srcPattern": "ak-d.tripcdn.com/images",
+        "replaceRules": [
+            {
+                "pattern": "_R_.*\\.",
+                "modifiers": "",
+                "replacement": "."
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "去哪儿",
+        "srcPattern": "tr-osdcp.qunarzz.com",
+        "replaceRules": [
+            {
+                "pattern": "_r_.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "马蜂窝",
+        "srcPattern": "q.mafengwo.net",
+        "replaceRules": [
+            {
+                "pattern": "\\?imageView.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "qifa.ru",
+        "srcPattern": "images\\.qifa\\.",
+        "replaceRules": [
+            {
+                "pattern": ".JPG_\\d+x\\d+",
+                "modifiers": "",
+                "replacement": ".JPG_1000x1000"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "哔哩哔哩",
+        "srcPattern": "https://i0.hdslb.com/bfs/",
+        "replaceRules": [
+            {
+                "pattern": ".jpg.*",
+                "modifiers": "",
+                "replacement": ".jpg"
+            },
+            {
+                "pattern": ".png.*",
+                "modifiers": "",
+                "replacement": ".png"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "HOGO",
+        "srcPattern": ".dlssyht.cn",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "ETSY",
+        "srcPattern": "i.etsystatic.com|www.etsy.com/img",
+        "replaceRules": [
+            {
+                "pattern": "il_\\d+x\\d+",
+                "modifiers": "",
+                "replacement": "il_NxN"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "蝉妈妈",
+        "srcPattern": "cdn-images.chanmama.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "17zwd",
+        "srcPattern": "17zwd.com",
+        "replaceRules": [
+            {
+                "pattern": "_\\d+-\\d+\\.jpg",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "karl",
+        "srcPattern": "www.karl.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "得物",
+        "srcPattern": "image-cdn.poizon.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "ebay",
+        "srcPattern": "i.ebayimg.com/images",
+        "replaceRules": [
+            {
+                "pattern": "s-l\\d+",
+                "modifiers": "",
+                "replacement": "s-l1600"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "ytrs",
+        "srcPattern": "ytrs.tk",
+        "replaceRules": [
+            {
+                "pattern": "size=%22sm%22",
+                "modifiers": "",
+                "replacement": "size=%22xl%22"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "拼多多",
+        "srcPattern": "pddpic.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            },
+            {
+                "pattern": "img-\\d+\\.pddpic",
+                "modifiers": "",
+                "replacement": "img.pddpic"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "adidas",
+        "srcPattern": "static1.adidas.com.cn",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "pawfecthouse",
+        "srcPattern": "pawfecthouse.com/cdn/",
+        "replaceRules": [
+            {
+                "pattern": "_\\d+x\\.",
+                "modifiers": "",
+                "replacement": "."
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.mytheresa.com",
+        "srcPattern": "www.mytheresa.com/media",
+        "replaceRules": [
+            {
+                "pattern": "356/402/30",
+                "modifiers": "",
+                "replacement": "1094/1238/100"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.ozon.ru",
+        "srcPattern": "ozone.ru",
+        "replaceRules": [
+            {
+                "pattern": "((wc|c)\\d+/)+",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.wildberries.ru",
+        "srcPattern": "wbbasket.ru|wbcontent.net",
+        "replaceRules": [
+            {
+                "pattern": "/images/(.+?)/",
+                "modifiers": "",
+                "replacement": "/images/big/"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.gigab2b.com",
+        "srcPattern": "gigab2b.cn/image",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*$",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.vidaxl.hr",
+        "srcPattern": "www.vidaxl.hr/dw/image",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*$",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.vidaxl.hr",
+        "srcPattern": "https://www.flannels.com/images/products/.*.jpg",
+        "replaceRules": [
+            {
+                "pattern": "https://www.flannels.com/images/products/(\\d\\d)(\\d+)_l(.*)",
+                "modifiers": "",
+                "replacement": "https://www.flannels.com/images/imgzoom/$1/$1$2_xxl$3"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "www.temu.com",
+        "srcPattern": "kwcdn.com",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "lazada",
+        "srcPattern": "img.lazcdn.com",
+        "replaceRules": [
+            {
+                "pattern": "_\\d+x\\d+.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "vvic",
+        "srcPattern": "item-img.vvic.com/prod/",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "xag",
+        "srcPattern": "xag-au.com/cdn",
+        "replaceRules": [
+            {
+                "pattern": "\\?.*",
+                "modifiers": "",
+                "replacement": ""
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "teepublic",
+        "srcPattern": "images.teepublic.com",
+        "replaceRules": [
+            {
+                "pattern": ",s_313",
+                "modifiers": "",
+                "replacement": ",s_630"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "ecombdimg",
+        "srcPattern": "ecombdimg.com",
+        "replaceRules": [
+            {
+                "pattern": "medium|thumb",
+                "modifiers": "",
+                "replacement": "large"
+            }
+        ]
+    },
+    {
+        "enabled": true,
+        "site": "cloudfront",
+        "srcPattern": "cloudfront.net",
+        "replaceRules": [
+            {
+                "pattern": "medium",
+                "modifiers": "",
+                "replacement": "original"
+            }
+        ]
+    }
+]
